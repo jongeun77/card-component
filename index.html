@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{box-sizing: border-box}
+    body{font-size: 22px; font-family: 'Outfit', sans-serif; background-color: hsl(217, 54%, 11%);}
+    .wrap{ max-width: 1440px; margin: 0 auto;}
+    .equili_wrap{ max-width: 664px; background-color: hsl(216, 50%, 16%); margin: 0 auto; padding: 30px; border-radius: 30px 30px 30px 30px;}
+    .box_top{ background: url(./images/image-equilibrium.jpg)no-repeat center/contain; max-width: 604px; height: 604px; display: block; position: relative;}
+    .box_top:before{ content:""; background-color: #0092A1; width: 604px; height: 604px; opacity: 1; position: absolute; top: 0; left: 0; display: inline-block; opacity: 0;}
+    .eye{ position: absolute; top: 50%; left: 50%; transform: translate(-50% ,-50%); z-index: 100; opacity: 0;}
+    .box_top:hover .eye{opacity: 1;}
+    .box_top:hover:before{ opacity: 0.5;}
+    .box_mid{ position: relative; border-bottom: 1px solid hsl(215, 51%, 70%);}
+    .box_mid .flex{ display: flex; align-items: center; justify-content: space-between; padding: 15px 0 30px 0;}
+    .box_mid .title{}
+    .box_mid .title h1{font-weight: 600; color: #fff; padding: 30px 0; margin: 0;}
+    .box_mid p{ color:  hsl(215, 51%, 70%); line-height: 2; margin: 0;}
+    .box_mid span{color: hsl(178, 100%, 50%); padding-left: 10px; cursor: pointer;}
+    .box_mid .svg_icon +p{color: hsl(215, 51%, 70%); position: relative;}
+    .box_mid .svg_icon +p:before{ content: ""; position: absolute; top: 0;right: 0; background: url(./images/icon-clock.svg)no-repeat; top: 14px; left: -24px; width: 17px; height: 17px;}
+    .box_btm{color: hsl(215, 51%, 70%); }
+    .box_btm .wrap{ padding: 30px 0 20px; position: relative;}
+    .box_btm .wrap:before{ content: ""; position: absolute; background: url(./images/image-avatar.png)no-repeat center/contain; border: 1px solid #fff; top: 40%; left: 0; width:30px; height: 30px; border-radius: 50%;}
+    .box_btm p{ display: inline-block; padding-left: 50px;}
+    .box_btm a{color: #fff; padding-left: 10px; text-decoration: none; cursor: pointer;}
+    .box_mid .title h1:hover{ color: hsl(178, 100%, 50%);}
+    .box_btm a:hover{ color: hsl(178, 100%, 50%);}
+
+  /* mobile */
+    @media screen and (max-width: 640px) {
+
+    .wrap{ width: 100%; margin: 0 auto;}
+    .equili_wrap{ width: 100%; background-color: hsl(216, 50%, 16%); margin: 0 auto; padding: 30px; border-radius: 30px 30px 30px 30px;}
+    .box_top{ background: url(./images/image-equilibrium.jpg)no-repeat center/contain; max-width: 580px; height: 580px; display: block; position: relative;}
+    .box_top:before{ content:""; background-color: #0092A1; width: 580px; height: 58px; opacity: 1; position: absolute; top: 0; left: 0; display: inline-block; opacity: 0;}
+    .eye{ position: absolute; top: 50%; left: 50%; transform: translate(-50% ,-50%); z-index: 100; opacity: 0;}
+    .box_top:hover .eye{opacity: 1;}
+    .box_top:hover:before{ opacity: 0.5;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="equili_wrap">
+      <div class="layer"></div>
+      <div class="box_top">
+        <img class="eye" src="./images/icon-view.svg" alt="">
+      </div>
+      <div class="box_mid">
+        <div class="title"><h1>Equilibrium #3429</h1></div>
+        <p>Our Equilibrium collection promotes balance and calm. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <div class="flex">
+          <a class="svg_icon">
+            <svg width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/></svg><span>0.041 ETH</span>
+          </a>
+          <p>3 days left</p>
+        </div>
+      </div>
+      <div class="box_btm">
+        <div class="wrap">
+          <p>Creation of</p><a href="">Jules Wyvern</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+  
+  
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
